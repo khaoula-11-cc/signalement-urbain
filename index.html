@@ -8,14 +8,61 @@
     <title>Signalement Urbain</title>
 
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Leaflet : bibliothèque de cartographie -->
+    <link rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+
 </head>
 
 <body>
 
-    <h1>Signalement Urbain</h1>
+    <header class="header">
+        <h1>Signalement Urbain</h1>
+        <p>Ensemble pour une ville meilleure</p>
+    </header>
 
-    <p>Carte et localisation des problèmes urbains</p>
+    <main class="container">
 
+        <aside class="sidebar">
+
+            <h2>Localisation</h2>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Rechercher un quartier..."
+            >
+
+            <h3>Catégories</h3>
+
+            <select id="category">
+                <option value="all">Toutes les catégories</option>
+                <option value="route">Problèmes routiers</option>
+                <option value="eclairage">Éclairage public</option>
+                <option value="dechets">Déchets</option>
+                <option value="eau">Problèmes d'eau</option>
+            </select>
+
+            <h3>Signalements</h3>
+
+            <p>Consultez les problèmes signalés dans votre ville.</p>
+
+        </aside>
+
+        <section class="map-section">
+
+            <h2>Carte des signalements</h2>
+
+            <div id="map">
+                La carte sera affichée ici.
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="js/script.js"></script>
 
 </body>
