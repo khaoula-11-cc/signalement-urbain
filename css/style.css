@@ -7,18 +7,103 @@
 
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f6f9;
-    color: #333;
+    background: #f3f6fa;
+    color: #263445;
 }
 
-h1 {
-    color: #1e3a5f;
-    text-align: center;
-    margin-top: 40px;
+/* En-tête */
+.header {
+    background: #163b5c;
+    color: white;
+    padding: 25px 35px;
 }
 
-p {
-    text-align: center;
-    margin-top: 15px;
-    font-size: 18px;
+.header h1 {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #d5e3ef;
+}
+
+/* Contenu principal */
+.container {
+    display: flex;
+    gap: 25px;
+    padding: 25px;
+    min-height: 85vh;
+}
+
+/* Menu latéral */
+.sidebar {
+    width: 300px;
+    min-width: 260px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.sidebar h2 {
+    color: #163b5c;
+    margin-bottom: 20px;
+}
+
+.sidebar h3 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+    color: #34536e;
+}
+
+.sidebar input,
+.sidebar select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d5dce5;
+    border-radius: 7px;
+    outline: none;
+    font-size: 14px;
+}
+
+.sidebar input:focus,
+.sidebar select:focus {
+    border-color: #2878b8;
+}
+
+/* Espace de la carte */
+.map-section {
+    flex: 1;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.06);
+}
+
+.map-section h2 {
+    margin-bottom: 20px;
+    color: #163b5c;
+}
+
+/* Carte */
+#map {
+    width: 100%;
+    height: 550px;
+    background: #e5ebef;
+    border-radius: 10px;
+}
+
+/* Adaptation aux petits écrans */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
+
+    #map {
+        height: 400px;
+    }
 }
